@@ -14,7 +14,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 
-	"github.com/wesleykirkland/terraform-provider-urllo/internal/client"
+	"github.com/urllo/terraform-provider-urllo/internal/client"
 )
 
 // Environment variables used as fallbacks for provider configuration.

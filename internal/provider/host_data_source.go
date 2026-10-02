@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	dschema "github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 
-	"github.com/wesleykirkland/terraform-provider-urllo/internal/client"
+	"github.com/urllo/terraform-provider-urllo/internal/client"
 )
 
 var _ datasource.DataSource = &HostDataSource{}

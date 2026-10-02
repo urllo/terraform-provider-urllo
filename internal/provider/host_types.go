@@ -11,7 +11,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 
-	"github.com/wesleykirkland/terraform-provider-urllo/internal/client"
+	"github.com/urllo/terraform-provider-urllo/internal/client"
 )
 
 // Attribute-type maps for the nested objects used by the host resource and data

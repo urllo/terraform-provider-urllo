@@ -21,7 +21,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 
-	"github.com/wesleykirkland/terraform-provider-urllo/internal/client"
+	"github.com/urllo/terraform-provider-urllo/internal/client"
 )
 
 var (

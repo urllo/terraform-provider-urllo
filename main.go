@@ -10,7 +10,7 @@ import (
 	"os"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
-	urlloprovider "github.com/wesleykirkland/terraform-provider-urllo/internal/provider"
+	urlloprovider "github.com/urllo/terraform-provider-urllo/internal/provider"
 )
 
 var (

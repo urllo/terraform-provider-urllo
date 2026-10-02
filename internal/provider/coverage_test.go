@@ -20,7 +20,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-go/tftypes"
 
-	"github.com/wesleykirkland/terraform-provider-urllo/internal/client"
+	"github.com/urllo/terraform-provider-urllo/internal/client"
 )
 
 // --- clientFromProviderData --------------------------------------------------

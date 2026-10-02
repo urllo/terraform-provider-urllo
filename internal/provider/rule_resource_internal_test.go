@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wesleykirkland/terraform-provider-urllo/internal/client"
+	"github.com/urllo/terraform-provider-urllo/internal/client"
 )
 
 func TestHostnameOf(t *testing.T) {

@@ -13,7 +13,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/wesleykirkland/terraform-provider-urllo/internal/client"
+	"github.com/urllo/terraform-provider-urllo/internal/client"
 )
 
 // mockUrllo is an in-memory implementation of the Urllo API used by mock-backed
