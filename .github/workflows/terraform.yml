@@ -1,5 +1,4 @@
-# Terraform CI for the ./terraform example, adapted from
-# https://github.com/wesleykirkland/wesleyk.me/blob/main/.github/workflows/terraform.yml
+# Terraform CI for the ./terraform example
 #
 # Flow: run all Go tests -> build the provider from source into a local
 # filesystem mirror (so `terraform init` resolves it without a registry) ->
