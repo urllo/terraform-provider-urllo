@@ -1,4 +1,4 @@
-// Copyright urllo 2026
+// Copyright 2026 EasyRedir Inc.
 // SPDX-License-Identifier: MPL-2.0
 
 // Package client is a small typed HTTP client for the urllo redirection API

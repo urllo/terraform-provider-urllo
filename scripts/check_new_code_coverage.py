@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright urllo 2026
+# Copyright 2026 EasyRedir Inc.
 # SPDX-License-Identifier: MPL-2.0
 
 """Fails if any line added on this branch (relative to main) in a non-test

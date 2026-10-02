@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright urllo 2026
+# Copyright 2026 EasyRedir Inc.
 # SPDX-License-Identifier: MPL-2.0
 
 """Runs this repo's Python unit tests (currently just test_check_docs.py).
