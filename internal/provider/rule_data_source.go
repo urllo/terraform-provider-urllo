@@ -84,7 +84,7 @@ func (d *RuleDataSource) Schema(ctx context.Context, req datasource.SchemaReques
 				ElementType:         types.StringType,
 			},
 			"name": schema.StringAttribute{
-				MarkdownDescription: "Display name Urllo assigns to the rule.",
+				MarkdownDescription: "Display name urllo assigns to the rule.",
 				Computed:            true,
 			},
 			"dns_status": schema.StringAttribute{

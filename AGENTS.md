@@ -46,6 +46,6 @@ exemption -- an unmarked gap always fails the check.
 
 Both `make cover` and `make cover-new` run the mock-backed acceptance tests
 (`TestAccMock*`), which need no credentials -- only the *real* (non-mock)
-acceptance tests (`TestAccRuleResource`, etc.) require Urllo credentials, and
+acceptance tests (`TestAccRuleResource`, etc.) require urllo credentials, and
 those self-skip without them. So both coverage gates run the same in CI and
 locally.

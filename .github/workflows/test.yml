@@ -152,7 +152,7 @@ jobs:
         run: make check-docs
 
   # Run acceptance tests in a matrix with Terraform CLI versions. These require
-  # Urllo credentials configured as repository secrets; without them the tests
+  # urllo credentials configured as repository secrets; without them the tests
   # skip themselves.
   #
   # Deliberately NOT using mise here, unlike the jobs above: this job needs

@@ -20,7 +20,7 @@ func TestAccHostResource(t *testing.T) {
 		PreCheck: func() {
 			testAccPreCheck(t)
 			if host == "" {
-				t.Skipf("%s must be set to an existing Urllo host for this test", envTestHost)
+				t.Skipf("%s must be set to an existing urllo host for this test", envTestHost)
 			}
 		},
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,

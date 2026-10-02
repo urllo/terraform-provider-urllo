@@ -359,7 +359,7 @@ provider "urllo" {
 
 data "urllo_hosts" "x" {}
 `,
-			ExpectError: regexp.MustCompile("Missing Urllo API key"),
+			ExpectError: regexp.MustCompile("Missing urllo API key"),
 		}},
 	})
 }

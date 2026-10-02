@@ -102,7 +102,7 @@ func (d *RulesDataSource) Schema(ctx context.Context, req datasource.SchemaReque
 						"forward_params":     schema.BoolAttribute{Computed: true, MarkdownDescription: "Whether query parameters are forwarded."},
 						"forward_path":       schema.BoolAttribute{Computed: true, MarkdownDescription: "Whether the path is forwarded."},
 						"tags":               schema.SetAttribute{Computed: true, ElementType: types.StringType, MarkdownDescription: "Tags."},
-						"name":               schema.StringAttribute{Computed: true, MarkdownDescription: "Display name Urllo assigns to the rule."},
+						"name":               schema.StringAttribute{Computed: true, MarkdownDescription: "Display name urllo assigns to the rule."},
 						"dns_status":         schema.StringAttribute{Computed: true, MarkdownDescription: "DNS configuration status of the rule's source host."},
 						"certificate_status": schema.StringAttribute{Computed: true, MarkdownDescription: "Certificate status of the rule's source host."},
 						"analytics": schema.SingleNestedAttribute{

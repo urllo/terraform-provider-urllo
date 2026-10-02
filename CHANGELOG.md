@@ -40,6 +40,6 @@ automatically from Conventional Commits by semantic-release.
 ### Features
 
 * **ci:** wire up SonarCloud scanning on PRs ([#2](https://github.com/urllo/terraform-provider-urllo/issues/2)) ([eee6a9b](https://github.com/urllo/terraform-provider-urllo/commit/eee6a9b56f4b54b59d4e67876d96865c30970a15))
-* Full Terraform provider for the Urllo API ([#1](https://github.com/urllo/terraform-provider-urllo/issues/1)) ([113596f](https://github.com/urllo/terraform-provider-urllo/commit/113596f6772905a0a0dd23cc206c5f090292526a))
+* Full Terraform provider for the urllo API ([#1](https://github.com/urllo/terraform-provider-urllo/issues/1)) ([113596f](https://github.com/urllo/terraform-provider-urllo/commit/113596f6772905a0a0dd23cc206c5f090292526a))
 * sonarcloud ci ([#3](https://github.com/urllo/terraform-provider-urllo/issues/3)) ([e2dd609](https://github.com/urllo/terraform-provider-urllo/commit/e2dd60936544cf175096ab19badbc03963156021))
 

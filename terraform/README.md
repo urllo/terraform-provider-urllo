@@ -1,4 +1,4 @@
-# Running the Urllo provider from a local build
+# Running the urllo provider from a local build
 
 This directory builds the provider from source and runs it with Terraform
 **without publishing it to a registry**. There are two ways to do that; pick
@@ -90,5 +90,5 @@ and `mirror.tfrc.example` are committed templates.
 - `outputs.tf` — prints host names, rule count, the custom-404 drift check,
   the full `example3` rule, and its past-week request count.
 
-Running `terraform apply` here manages real resources against your Urllo
+Running `terraform apply` here manages real resources against your urllo
 account; run `terraform destroy` when you're done experimenting.

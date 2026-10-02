@@ -6,5 +6,5 @@ partition: tf-ecosystem
 summary:
   owner: urllo
   description: |
-    Terraform provider for the Urllo redirection service, covering the full API (rules and hosts).
+    Terraform provider for the urllo redirection service, covering the full API (rules and hosts).
   visibility: public

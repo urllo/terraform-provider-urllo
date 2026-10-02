@@ -69,8 +69,8 @@ test-py: hooks
 	$(PYTHON) scripts/run_python_tests.py
 
 # Warns (never fails, here or in CI -- see the "api-spec-drift" job) when the
-# live Urllo OpenAPI spec has moved past the version recorded in
-# API_SPEC_VERSION. Urllo doesn't publish an API changelog, so this is the
+# live urllo OpenAPI spec has moved past the version recorded in
+# API_SPEC_VERSION. urllo doesn't publish an API changelog, so this is the
 # only drift signal available. See scripts/check_api_spec_version.py.
 check-api-spec: hooks
 	$(PYTHON) scripts/check_api_spec_version.py
