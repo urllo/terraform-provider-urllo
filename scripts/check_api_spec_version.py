@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright Wesley Kirkland-Daily 2026
+# Copyright urllo 2026
 # SPDX-License-Identifier: MPL-2.0
 
 """Warns when the live urllo OpenAPI spec has moved past the version this

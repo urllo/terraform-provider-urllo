@@ -1,4 +1,4 @@
-// Copyright Wesley Kirkland-Daily 2026
+// Copyright urllo 2026
 // SPDX-License-Identifier: MPL-2.0
 
 //go:build generate
