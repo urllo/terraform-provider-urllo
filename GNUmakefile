@@ -87,9 +87,8 @@ cover: hooks
 
 # cover-new is the repo-wide floor's sibling: it fails if any line *added on
 # this branch relative to main* isn't covered, catching gaps a small new file
-# can hide from the aggregate COVER_MIN check above (see AGENTS.md).
-# Approximates SonarCloud's "Coverage on New Code" gate locally. Shares the
-# same COVER_MIN variable as `cover` above -- override per-invocation (e.g.
+# can hide from the aggregate COVER_MIN check above (see AGENTS.md). Shares
+# the same COVER_MIN variable as `cover` above -- override per-invocation (e.g.
 # `make cover-new COVER_MIN=100`) for a stricter local check.
 # See scripts/check_new_code_coverage.py.
 cover-new: hooks
