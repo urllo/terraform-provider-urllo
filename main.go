@@ -43,7 +43,7 @@ func run(ctx context.Context, version string, args []string) error {
 	}
 
 	opts := providerserver.ServeOpts{
-		Address: "registry.terraform.io/wesleykirkland/urllo",
+		Address: "registry.terraform.io/urllo/urllo",
 		Debug:   *debug,
 	}
 

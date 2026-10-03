@@ -62,7 +62,7 @@ For a quick edit-build-run loop where you don't want to reinstall into a mirror:
 ```shell
 go install .                                   # from the repo root
 cd terraform
-printf 'provider_installation {\n  dev_overrides {\n    "registry.terraform.io/wesleykirkland/urllo" = "%s/bin"\n  }\n  direct {}\n}\n' "$(go env GOPATH)" > dev.tfrc
+printf 'provider_installation {\n  dev_overrides {\n    "registry.terraform.io/urllo/urllo" = "%s/bin"\n  }\n  direct {}\n}\n' "$(go env GOPATH)" > dev.tfrc
 
 # Do NOT run `terraform init` with a dev override in effect.
 TF_CLI_CONFIG_FILE=./dev.tfrc terraform validate

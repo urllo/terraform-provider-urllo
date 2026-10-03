@@ -15,7 +15,7 @@ The urllo provider manages redirect rules and source hosts in the [urllo](https:
 terraform {
   required_providers {
     urllo = {
-      source = "wesleykirkland/urllo"
+      source = "urllo/urllo"
     }
   }
 }

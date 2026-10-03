@@ -18,7 +18,7 @@
     {
       "description": "terraform/version.tf pins the urllo provider to 0.0.1 to match ./build-local.sh's local filesystem-mirror build, not a registry release -- this repo IS that provider, so Renovate bumping it against the registry is both circular and wrong for local dev.",
       "matchDatasources": ["terraform-provider"],
-      "matchPackageNames": ["wesleykirkland/urllo"],
+      "matchPackageNames": ["urllo/urllo"],
       "enabled": false
     },
     {

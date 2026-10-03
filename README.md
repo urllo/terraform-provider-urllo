@@ -21,7 +21,7 @@ It covers the entire urllo API:
 terraform {
   required_providers {
     urllo = {
-      source = "wesleykirkland/urllo"
+      source = "urllo/urllo"
     }
   }
 }
