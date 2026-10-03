@@ -56,7 +56,7 @@ jobs:
           version: latest
       # Same check pre-commit runs locally (see GNUmakefile's govulncheck
       # target and .githooks/pre-commit) -- CI is the authoritative
-      # enforcement, pre-commit is the fast local mirror.
+      # enforcement; pre-commit only warns on findings.
       - name: make govulncheck
         run: make govulncheck
 

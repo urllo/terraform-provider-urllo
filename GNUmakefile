@@ -7,11 +7,10 @@ default: hooks fmt lint install generate
 
 # Points git at .githooks/ (pre-commit runs gofmt/lint/test/check-docs) so the
 # hook is active without the user ever running `git config` or an install
-# script themselves. This re-applies on every `make` invocation -- the same
-# self-install trick husky uses via npm's "prepare" script, just triggered by
-# `make` instead of `npm install` since that's this repo's equivalent entry
-# point. `git config` here is a cheap, idempotent, repo-local write (like
-# ~/.gitconfig, scoped to .git/config in this clone), not a destructive one.
+# script themselves. This re-applies on every `make` invocation, since `make`
+# is this repo's entry point. `git config` here is a cheap, idempotent,
+# repo-local write (like ~/.gitconfig, scoped to .git/config in this clone),
+# not a destructive one.
 HOOKS_DIR := .githooks
 
 hooks:

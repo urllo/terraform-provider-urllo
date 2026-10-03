@@ -183,9 +183,7 @@ make testacc               # acceptance tests (see below)
 
 Running any `make` target points git's hooks at [`.githooks/`](.githooks/)
 (the `hooks` target sets `core.hooksPath`), so there's nothing to install
-manually -- the same self-configuring approach as husky's npm `prepare`
-script, just triggered by `make` instead of `npm install`. From then on,
-every commit in this clone runs [`.githooks/pre-commit`](.githooks/pre-commit):
+manually. From then on, every commit in this clone runs [`.githooks/pre-commit`](.githooks/pre-commit):
 a `gofmt` check, `make lint`, `make test`, `make check-docs`, `make test-py`,
 and `make lint-py`. `lint` and `lint-py` are skipped locally (with a warning)
 if `golangci-lint` / `ruff` aren't on `PATH` -- CI still enforces both. None

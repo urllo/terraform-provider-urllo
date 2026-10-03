@@ -1,7 +1,6 @@
 # Changelog
 
-All notable changes to this project are documented in this file, generated
-automatically from Conventional Commits by semantic-release.
+All notable changes to this project are documented in this file.
 
 ## [1.3.0](https://github.com/urllo/terraform-provider-urllo/compare/v1.2.0...v1.3.0) (2026-08-18)
 
