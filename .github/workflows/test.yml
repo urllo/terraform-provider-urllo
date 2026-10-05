@@ -92,7 +92,6 @@ jobs:
     timeout-minutes: 10
     permissions:
       contents: read # checkout
-      code-quality: write # upload coverage report
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
@@ -106,20 +105,10 @@ jobs:
       # credentials, so this covers the full CRUD path. See COVERAGE.md.
       - name: coverage gate
         run: make cover
-      # Runs scripts/test_check_docs.py and writes a Cobertura-format
-      # coverage.xml (see scripts/run_python_tests.py) alongside Go's
-      # coverage.out, before the Codecov step below so both get picked up in
-      # the same upload.
+      # Runs the Python unit tests under scripts/ (see
+      # scripts/run_python_tests.py).
       - name: make test-py
         run: make test-py
-      # Feeds coverage.out and coverage.xml to Codecov for PR coverage
-      # reports; the uploader auto-detects both when `files:` isn't given.
-      # fail_ci_if_error defaults to false, so a missing/bad CODECOV_TOKEN
-      # warns rather than failing this required check.
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
 
   generate:
     runs-on: ubuntu-latest

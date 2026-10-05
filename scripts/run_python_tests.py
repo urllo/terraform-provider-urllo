@@ -5,11 +5,10 @@
 """Runs this repo's Python unit tests (currently just test_check_docs.py).
 
 If the `coverage` CLI is on PATH, also writes a Cobertura-format XML report
-to <repo root>/coverage.xml, which CI uploads to Codecov alongside Go's
-`coverage.out` (see test.yml's `unit` job). Coverage is
-an optional nicety, not a hard dependency: scripts/ stays pure standard
-library otherwise, so a contributor without `coverage` installed (via pip,
-pipx, mise, etc.) still gets test results, just no report. Mirrors how
+to <repo root>/coverage.xml. Coverage is an optional nicety, not a hard
+dependency: scripts/ stays pure standard library otherwise, so a contributor
+without `coverage` installed (via pip, pipx, mise, etc.) still gets test
+results, just no report. Mirrors how
 `.githooks/pre-commit` soft-skips `golangci-lint` / `ruff` when they aren't
 on PATH.
 
