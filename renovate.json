@@ -16,6 +16,13 @@
       "enabled": true
     },
     {
+      "description": "...but not indirect majors. A Go major is a new module path (/vN) that only the dependency importing it can adopt, so Renovate's bump just swaps the require line and `go mod tidy` re-adds the old major at the module graph's minimum version -- in #36 that silently took tools/'s goldmark from 1.7.17 back to 1.7.8, undoing the #30 security bump.",
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["indirect"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
       "description": "terraform/version.tf pins the urllo provider to 0.0.1 to match ./build-local.sh's local filesystem-mirror build, not a registry release -- this repo IS that provider, so Renovate bumping it against the registry is both circular and wrong for local dev.",
       "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["urllo/urllo"],
@@ -58,8 +65,8 @@
       "groupName": "Mise Major"
     }
   ],
-  "description": "postUpdateOptions.gomodTidy: Renovate's `go get` only records the /go.mod hashes needed for module-graph resolution, not the h1: zip hashes needed to build a package -- without a tidy, go.sum ships incomplete and `go tool govulncheck` dies with 'missing go.sum entry'. Bit this repo twice (#21, #28).",
-  "postUpdateOptions": ["gomodTidy"],
+  "description": "postUpdateOptions.gomodTidy: Renovate's `go get` only records the /go.mod hashes needed for module-graph resolution, not the h1: zip hashes needed to build a package -- without a tidy, go.sum ships incomplete and `go tool govulncheck` dies with 'missing go.sum entry'. Bit this repo twice (#21, #28). gomodUpdateImportPaths: Renovate skips the tidy on major updates unless this is also set (lib/modules/manager/gomod/artifacts.ts, mustSkipGoModTidy), which is why #36 failed the CI tidy check; it also rewrites /vN import paths so the new major is actually used.",
+  "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"],
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {
     "description": "Security fixes must not wait for the Monday window -- an empty schedule lets them raise a PR as soon as an advisory lands.",
