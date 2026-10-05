@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
-# Copyright Wesley Kirkland-Daily 2026
+# Copyright 2026 EasyRedir Inc.
 # SPDX-License-Identifier: MPL-2.0
 
 """Runs this repo's Python unit tests (currently just test_check_docs.py).
 
 If the `coverage` CLI is on PATH, also writes a Cobertura-format XML report
-to <repo root>/coverage.xml -- the `coverage xml` command's output is a
-Cobertura-schema report, the same family of format Go's `coverage.out` plays
-in for this repo's SonarCloud/Codecov integration (see
-sonar.python.coverage.reportPaths in sonar-project.properties). Coverage is
-an optional nicety, not a hard dependency: scripts/ stays pure standard
-library otherwise, so a contributor without `coverage` installed (via pip,
-pipx, mise, etc.) still gets test results, just no report. Mirrors how
+to <repo root>/coverage.xml. Coverage is an optional nicety, not a hard
+dependency: scripts/ stays pure standard library otherwise, so a contributor
+without `coverage` installed (via pip, pipx, mise, etc.) still gets test
+results, just no report. Mirrors how
 `.githooks/pre-commit` soft-skips `golangci-lint` / `ruff` when they aren't
 on PATH.
 
