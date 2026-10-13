@@ -5,7 +5,6 @@ package provider
 
 import (
 	"fmt"
-	"os"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
@@ -15,14 +14,9 @@ import (
 // hosts are provisioned via DNS (not the API), the test needs a real host to
 // adopt (URLLO_TEST_HOST) and is skipped when that variable is unset.
 func TestAccHostResource(t *testing.T) {
-	host := os.Getenv(envTestHost)
+	host := testAccHost(t)
 	resource.Test(t, resource.TestCase{
-		PreCheck: func() {
-			testAccPreCheck(t)
-			if host == "" {
-				t.Skipf("%s must be set to an existing urllo host for this test", envTestHost)
-			}
-		},
+		PreCheck:                 func() { testAccPreCheck(t) },
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,
 		Steps: []resource.TestStep{
 			{
