@@ -6,7 +6,7 @@
 # hashicorp/setup-terraform instead, since it needs several concrete Terraform
 # CLI versions side by side), and the ruff/coverage pins also used by
 # scripts/run_python_tests.py's CI step.
-go = "1.27.1"
+go = "1.27.2"
 golangci-lint = "2.14.0"
 terraform = "1.16.4"
 
