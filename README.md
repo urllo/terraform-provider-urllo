@@ -213,14 +213,13 @@ behind `TF_ACC`. There are two flavours:
   ```
 
 - **Live** tests create real resources against a urllo account and additionally
-  require credentials and a domain your account controls:
+  require credentials and an existing host in your account:
 
   ```shell
   export TF_ACC=1
   export URLLO_API_KEY=...
   export URLLO_API_SECRET=...
-  export URLLO_TEST_DOMAIN=unleashthe.cloud   # rules are created on subdomains of this
-  export URLLO_TEST_HOST=urllo.unleashthe.cloud  # optional: an existing host to manage
+  export URLLO_TEST_HOST=your.host.here  # host test manages it; rule tests create rules on random paths under it
   make testacc
   ```
 

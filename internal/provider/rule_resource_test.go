@@ -11,8 +11,8 @@ import (
 )
 
 // TestAccRuleResource exercises create, update, and import of urllo_rule.
-// DNS validation is disabled because the randomized test subdomains have no
-// live DNS records. Requires TF_ACC, urllo credentials, and URLLO_TEST_DOMAIN.
+// DNS validation is disabled so the test doesn't depend on the test host's DNS
+// state. Requires TF_ACC, urllo credentials, and URLLO_TEST_HOST.
 func TestAccRuleResource(t *testing.T) {
 	source := testAccSource(t, "tf-acc")
 
