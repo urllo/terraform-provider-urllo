@@ -22,7 +22,7 @@ func TestAccRulesDataSource(t *testing.T) {
 				Config: testAccRuleDataSourceConfig(source),
 				Check: resource.ComposeAggregateTestCheckFunc(
 					// The single data source reflects the created rule.
-					resource.TestCheckResourceAttr("data.urllo_rule.by_id", "target_url", "https://dest.example.com"),
+					resource.TestCheckResourceAttr("data.urllo_rule.by_id", "target_url", "https://dest.example.com/"),
 					resource.TestCheckResourceAttr("data.urllo_rule.by_id", "source_urls.#", "1"),
 					// The list data source returns at least one rule.
 					resource.TestCheckResourceAttrWith("data.urllo_rules.all", "rules.#", func(v string) error {
@@ -67,6 +67,7 @@ data "urllo_rule" "by_id" {
 
 data "urllo_rules" "all" {
   source_query = %q
+  depends_on   = [urllo_rule.test]
 }
 `, source, source)
 }

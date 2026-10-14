@@ -79,16 +79,15 @@ and `mirror.tfrc.example` are committed templates.
 - `version.tf` — pins the `urllo` provider version to match `build-local.sh`.
 - `data.tf` — reads `urllo_hosts` and `urllo_rules` (safe, read-only), plus a
   second `urllo_rules` lookup with `include_analytics = true` scoped to the
-  `example3` rule's request volume over the past week.
-- `urllo_rule.tf` — manages two real `urllo_rule` redirects (`example`,
-  `example3`), including DNS validation, forwarding, and tags.
-- `urllo_host.tf` — manages two real `urllo_host` resources: `example3`
-  (match options, not-found forwarding, security/HSTS settings) and
-  `custom_404` (a custom 404 body).
+  `example` rule's request volume over the past week.
+- `urllo_rule.tf` — manages one real `urllo_rule` redirects (`example`), 
+   including DNS validation, forwarding, and tags.
+- `urllo_host.tf` — manages one real `urllo_host` resources: `example_302`
+  (match options, not-found forwarding, security/HSTS settings).
 - `import.tf` — `import` blocks bringing the two existing rules above under
   Terraform management by ID.
-- `outputs.tf` — prints host names, rule count, the custom-404 drift check,
-  the full `example3` rule, and its past-week request count.
+- `outputs.tf` — prints host names, rule count, the full `example` rule, and
+  its past-week request count.
 
 Running `terraform apply` here manages real resources against your urllo
 account; run `terraform destroy` when you're done experimenting.

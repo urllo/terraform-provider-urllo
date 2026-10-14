@@ -1,19 +1,8 @@
 resource "urllo_rule" "example" {
-  source_urls  = ["go.unleashthe.cloud/"]
-  target_url   = "https://unleashthe.cloud"
-  validate_dns = false
-}
-
-resource "urllo_rule" "example3" {
-  source_urls          = ["go3.unleashthe.cloud/"]
-  target_url           = "https://unleashthe.cloud"
-  validate_dns         = true
-  validate_dns_timeout = "1m"
-
-  response_type = "moved_permanently"
-
+  source_urls    = ["source.urllo-acceptance-test.com/"]
+  target_url     = "https://target.urllo-acceptance-test.com"
+  validate_dns   = false
   forward_params = true
   forward_path   = true
-
-  tags = ["marketing", "migration"]
+  tags           = ["tag 1", "tag 2"]
 }
